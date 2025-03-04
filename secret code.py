@@ -19,7 +19,7 @@ def encode(normal_lang):
     '''Converts your code to secret code'''
     if (len(normal_lang)<3):
         print(normal_lang[::-1])
-    elif (len(normal_lang)>3):
+    elif (len(normal_lang)>=3):
         letter = normal_lang[1:]+normal_lang[0]
         word_end = "".join(random.choices(string.ascii_lowercase, k=3))
         word_begin = "".join(random.choices(string.ascii_lowercase, k=3))
@@ -30,7 +30,7 @@ def decode(normal_lang):
     '''Converts your secret code to code'''
     if (len(normal_lang)<3):
         print(normal_lang[::-1])
-    elif (len(normal_lang)>3):
+    elif (len(normal_lang)>=3):
         word = normal_lang[3:-3]
         letter = word[-1]+word[:-1]
         print(f"Your code is {letter}")
