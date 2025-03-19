@@ -8,7 +8,8 @@ class Library:
     self.no_of_Books = len(self.books)
 
   def showInfo(self):
-    print(f"The library has {self.no_of_Books} books. The books are")
+    print(f"The library has {self.no_of_Books} books.") 
+    print("The books are as follows:-")
     for book in self.books:
       print(book)
 
