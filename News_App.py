@@ -3,7 +3,7 @@ import json
 import os
 
 # Secure API key storage (Use environment variables)
-API_KEY = os.getenv("NEWS_API_KEY")  # Set this in your environment variables
+API_KEY = os.getenv("NEWS_API_KEY") 
 
 if not API_KEY:
     print("Error: API Key not found. Set NEWS_API_KEY as an environment variable.")
@@ -11,7 +11,7 @@ if not API_KEY:
 
 query = input("What type of news are you interested in? ")
 
-url = f"https://newsapi.org/v2/everything?q={query}&from=2023-01-28&sortBy=publishedAt&apiKey={API_KEY}"
+url = f"https://newsapi.org/v2/everything?q={query}&apiKey={API_KEY}"
 
 try:
     r = requests.get(url)
